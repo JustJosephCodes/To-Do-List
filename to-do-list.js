@@ -13,7 +13,7 @@ function renderToDoList() {
                             toDoList.splice(${i}, 1);
                             renderToDoList();
                         ">
-                        <img src="/images/trash-can.svg" alt="">
+                        <img src="./images/trash-can.svg" alt="">
                         </button>
                     </div>
             </div>        
