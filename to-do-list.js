@@ -1,5 +1,16 @@
 const toDoList = [];
+const addButton = document.querySelector(".add-btn");
+
 renderToDoList();
+
+addButton.addEventListener("click", addToDo)
+
+document.addEventListener("keypress", function (event){
+    if (event.key === `Enter`){
+        addToDo()
+    }
+})
+
 function renderToDoList() {
     let toDoListHTML = ``;
         for (let i = 0; i < toDoList.length; i++) {
@@ -18,7 +29,7 @@ function renderToDoList() {
                     </div>
             </div>        
         </div>`;
-    toDoListHTML += html;
+    toDoListHTML = html;
     }
         document.querySelector(`.card-wrapper`).innerHTML = toDoListHTML;
 }
@@ -29,9 +40,4 @@ function addToDo() {
     toDoList.push(name);
     inputElement.value = "";
     renderToDoList();
-}
-function keyDown() {
-    if (event.key === `Enter`) {
-    addToDo();
-    }
 }
