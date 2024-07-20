@@ -7,12 +7,18 @@
 --dark-:#4F4350;
 --action-:#D9BAAC;
 }
+
+img{
+    width: 100%;
+}
+
 body{
     background-color: var(--light-);
     padding: 0;
     margin: 0;
     font-family: "Poppins";
 }
+
 h1{
     color: var(--dark-);
     text-align: center;
@@ -23,6 +29,7 @@ h1{
     font-weight: 300;
     text-wrap: nowrap;
 }
+
 input::placeholder,
 input{
     letter-spacing: 2px;
@@ -32,6 +39,7 @@ input{
     opacity: 85%;
     text-indent: 10px;
 }
+
 input{
     border: none;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
@@ -40,11 +48,13 @@ input{
     padding-block: 10px;
     outline: none;
 }
+
 .hero{
     display: flex;
     justify-content: center;
     gap: 10px;
 }
+
 .add-btn{
     background-color: var(--action-);
     color: var(--dark-);
@@ -59,43 +69,48 @@ input{
     cursor: pointer;
 }
             /* The Greatest Coder That Ever Lived */
+
 .card-wrapper{
-    padding-block: 30px;
-    padding-right: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
-    justify-content: space-around;
-    align-content: center;
     row-gap: 30px;
     column-gap: 35px;
+    padding-block: 30px;
+    justify-content: space-around;
 }
+
+.card-wrapper img{
+    width: 20px;
+}
+
+.task-wrapper{
+
+}
+
 .taskname{
     background-color: var(--dark-);
-    border-radius: 12px;
     min-width: 200px;
     min-height: 150px;
     color: var(--light-);
-    position: relative;
-}
-.taskname p{
-    padding-inline: 10px ;
     letter-spacing: 2px;
     font-weight: 500;
     font-size: 16px;
+    position: relative;
+    border-radius: 12px;
 }
-.task-wrapper{
-    display: flex;
-    flex-direction: column;
+
+.taskname p{
+    padding-inline: 10px;
 }
-.delete-wrapper{
+
+.delete{
     position: absolute;
     bottom: 15px;
     right: 15px;
-}
-.delete{
-    background-color: transparent;
     border: none;
+    background-color: transparent;
 }
+
 @media (min-width:390px) {
 
     h1{
